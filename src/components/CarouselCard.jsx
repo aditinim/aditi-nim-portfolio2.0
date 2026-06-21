@@ -75,17 +75,17 @@ const CarouselCard = ({project, onHoverStart, onHoverEnd}) => {
             {/* Title panel */}
 
             <div 
-                style={{bottom: 'calc(100% + 1.5rem)'}} 
-                className="titlePanel absolute left-0 pointer-events-none flex flex-col gap-[0.8rem]">
+                style={{bottom: 'calc(100% + 1rem)'}} 
+                className="titlePanel absolute left-0 pointer-events-none flex flex-col gap-[0.4rem]">
                 
-                <TextReveal ref={numberRef} trigger="manual" splitBy="chars" duration= "0.25" >
+                <TextReveal ref={numberRef} trigger="manual" splitBy="chars" duration= "0.55" >
                     <h3 
                         className="text-[1rem] text-[#010101]">
                         {project.number}
                     </h3>
                 </TextReveal>
 
-                <TextReveal ref={titleRef} trigger="manual" splitBy="words" duration="0.25" >
+                <TextReveal ref={titleRef} trigger="manual" splitBy="words" duration="0.55" >
                     <h3 
                         className="text-[1rem] text-[#010101]">
                         {project.title}
@@ -98,7 +98,7 @@ const CarouselCard = ({project, onHoverStart, onHoverEnd}) => {
             {/* image */}
 
             <div className="imageDiv object-cover absolute h-full w-full overflow-hidden">
-                <img ref={imgRef} src={project.coverImage} alt={project.title} style={{transformOrigin: 'center center', userSelect: 'none'}} className="h-full w-full object-cover "/>
+                <img ref={imgRef} src={project.coverImage} alt={project.title} style={{transformOrigin: 'center center', userSelect: 'none'}} className="h-full scale-[1.6] w-full object-cover "/>
             </div>
 
     </div>
