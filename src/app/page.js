@@ -1,6 +1,9 @@
 'use client'
 import { useRef } from "react";
-import TextReveal from "@/components/TextReveal";
+// import TextReveal from "@/components/TextReveal";
+import InfiniteCarousel from "@/components/InfiniteCarousel";
+import { projects } from "@/data/projects";
+
 
 export default function Home() {
 
@@ -16,18 +19,8 @@ export default function Home() {
 
   return (
     
-    <main className="h-[300vh] w-full bg-[#010101]">
-      <div 
-        onPointerEnter={handleHoverEnter} 
-        onPointerLeave={handleHoverLeave}
-        className="h-[8rem] w-[12rem] bg-red-500"></div>
-      <TextReveal 
-        ref={triggerRef} 
-        splitBy='chars' 
-        trigger= "manual"
-        className= 'text-[3rem] text-white '>
-        Hello everyone
-      </TextReveal>
+    <main className="h-screen flex items-start w-full ">
+      <InfiniteCarousel projects={projects}></InfiniteCarousel>
     </main>
   );
 }
