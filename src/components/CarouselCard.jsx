@@ -1,0 +1,67 @@
+import {useRef} from 'react'
+import TextReveal from './TextReveal';
+
+const CARD_W= 200;
+const CARD_H= 280;
+const SCALE= 1.35;
+
+
+
+const CarouselCard = ({project}) => {
+
+    const cardRef= useRef(null);
+    const imgRef= useRef(null);
+    const numberRef= useRef(null);
+    const titleRef= useRef(null);
+
+    const onEnter= ()=>{
+        
+    }
+
+
+  return (
+    <div 
+        ref={cardRef} 
+        onMouseEnter={onEnter}
+        style={{
+            width: CARD_w, 
+            height: CARD_H, 
+            flexShrink: 0, 
+            overflow: visible, 
+            cursor: pointer
+        }} 
+        className="relative]">
+            {/* Title panel */}
+
+            <div 
+                style={{bottom: 'calc(100%+ 3rem'}} 
+                className="titlePanel absolute left-0 pointer-events-none flex flex-col gap-[1rem]">
+                
+                <TextReveal ref={numberRef} trigger="manual" splitBy="chars" >
+                    <h3 
+                        className="text-[1rem] text-[#010101]">
+                        {project.number}
+                    </h3>
+                </TextReveal>
+
+                <TextReveal ref={titleRef} trigger="manual" splitBy="words" >
+                    <h3 
+                        className="text-[1rem] text-[#010101]">
+                        {project.title}
+                    </h3>
+                </TextReveal>
+                
+            </div>
+
+
+            {/* image */}
+
+            <div className="imageDiv absolute h-full w-full overflow-hidden">
+                <img ref={imgRef} src={project.coverImage} alt={project.title} style={{transformOrigin: 'center center', userSelect: 'none'}} className="h-full w-full object-cover "/>
+            </div>
+
+    </div>
+  )
+}
+
+export default CarouselCard
