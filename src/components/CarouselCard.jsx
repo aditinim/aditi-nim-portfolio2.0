@@ -7,7 +7,7 @@ const SCALE= 1.35;
 
 
 
-const CarouselCard = ({project}) => {
+const CarouselCard = ({project, onHoverStart, onHoverEnd}) => {
 
     const cardRef= useRef(null);
     const imgRef= useRef(null);
@@ -15,7 +15,33 @@ const CarouselCard = ({project}) => {
     const titleRef= useRef(null);
 
     const onEnter= ()=>{
-        
+        onHoverStart?.();
+
+        gsap.to(cardRef.current , {
+            width: CARD_W * SCALE,
+            height: CARD_H * SCALE,
+            duration: 0.45,
+            ease: "power3.out",
+        })
+
+        numberRef.current?.play();
+        titleRef.current?.play();
+
+    }
+
+    const onLeave= ()=>{
+        onHoverEnd?.();
+
+        gsap.to(cardRef.current , {
+            width: CARD_W ,
+            height: CARD_H ,
+            duration: 0.24,
+            ease: "power3.out",
+        })
+
+        numberRef.current?.reverse();
+        titleRef.current?.reverse();
+
     }
 
 
@@ -23,6 +49,8 @@ const CarouselCard = ({project}) => {
     <div 
         ref={cardRef} 
         onMouseEnter={onEnter}
+        onMouseLeave={onLeave}
+
         style={{
             width: CARD_w, 
             height: CARD_H, 
