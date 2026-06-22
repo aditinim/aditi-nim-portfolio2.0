@@ -43,6 +43,7 @@ const TextReveal = forwardRef(({
 
             gsap.set(elements, {
                 yPercent: 110,
+                opacity:0
             })
 
             tlRef.current= gsap.timeline({
