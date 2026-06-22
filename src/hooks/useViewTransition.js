@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import {useCallback} from 'react'
 
 
-const STRIP_COUNT= 7;
+const STRIP_COUNT= 100;
 const createStrips = ()=>{
     const overlay= document.createElement("div");
     overlay.id= "page-transition-overlay"
@@ -22,7 +22,7 @@ const createStrips = ()=>{
         strip.style.cssText= `
             flex: 1;
             height: 100%;
-            background-color: #010101;
+            background-color: #171314;
             transform: scaleY(0);
             transform-origin: bottom;
         `;
@@ -39,6 +39,7 @@ const createStrips = ()=>{
 }
 
 const removeOverlay = ()=>{
+    if (typeof document === "undefined") return;
     const el= document.getElementById("page-transition-overlay");
     if(el){
         el.remove();
@@ -60,8 +61,8 @@ const useViewTransition = () => {
             duration: 0.58,
             ease: "power3.inOut",
             stagger: {
-                each: 0.06,
-                from: "center"
+                each: 0.003,
+                from: "start"
             },
             onComplete: ()=>{
                 router.push(href);
@@ -73,8 +74,8 @@ const useViewTransition = () => {
                     ease: "power3.inOut",
                     delay: 0.12,
                     stagger: {
-                each: 0.06,
-                from: "center"
+                each: 0.003,
+                from: "end"
             },
                     transformOrigin: "top",
                     onComplete: removeOverlay,
