@@ -58,10 +58,10 @@ const CarouselCard = ({project, onHoverStart, onHoverEnd}) => {
 
     };
 
-    const {navitageTo}= useViewTransition();
+    const {navigateTo}= useViewTransition();
 
     const handleClick= ()=>{
-        navitageTo(`/project/${project.slug}`)
+        navigateTo(`/project/${project.slug}`)
     }
 
 

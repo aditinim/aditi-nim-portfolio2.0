@@ -94,8 +94,8 @@ export const projects = [
     gallery: [
       "https://images.unsplash.com/photo-1558981359-219d6364c9c8?w=800&q=80",
       "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
-      "https://images.unsplash.com/photo-1568772585407-9f7bab9ec6c5?w=800&q=80",
-      "https://images.unsplash.com/photo-1541473945168-8e60b98d7bec?w=800&q=80",
+      "https://images.unsplash.com/photo-1623343559257-1f3aef3a77e5?q=80&w=2083&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1572452571879-3d67d5b2a39f?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
     tags: ["Motion", "Silhouette", "Dusk"],
   },
@@ -144,8 +144,8 @@ export const projects = [
     gallery: [
       "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=800&q=80",
       "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=800&q=80",
-      "https://images.unsplash.com/photo-1509049411209-5ede3ecb3e24?w=800&q=80",
-      "https://images.unsplash.com/photo-1546961342-ea5f62d5a27b?w=800&q=80",
+      "https://images.unsplash.com/photo-1778165657501-558e29e5e0c0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1780787175530-3cefaac55826?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
     tags: ["Light", "Golden Hour", "Editorial"],
   },
@@ -168,7 +168,7 @@ export const projects = [
       "https://images.unsplash.com/photo-1445205170230-053b83016050?w=1600&q=90",
     gallery: [
       "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80",
-      "https://images.unsplash.com/photo-1485462537746-965f33f4f31e?w=800&q=80",
+      "https://images.unsplash.com/photo-1780592651409-e84041b3f8a0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80",
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
     ],

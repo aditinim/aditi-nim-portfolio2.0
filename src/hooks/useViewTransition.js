@@ -11,7 +11,7 @@ const createStrips = ()=>{
     overlay.style.cssText= `
         position: fixed;
         inset:0; 
-        z-index= 9999;
+        z-index: 9999;
         pointer-events: none;
         display: flex;
     `;
@@ -52,7 +52,7 @@ const useViewTransition = () => {
 
     const router= useRouter();
 
-    const navitageTo= useCallback((href)=>{
+    const navigateTo= useCallback((href)=>{
         const overlay= createStrips(STRIP_COUNT);
 
         const strips= Array.from(overlay.children);
@@ -87,7 +87,7 @@ const useViewTransition = () => {
 
     
 
-  return {navitageTo};
+  return {navigateTo};
 }
 
 
